@@ -1,6 +1,5 @@
 """Default configuration and tunable thresholds."""
 
-
 # FFmpeg / scdet settings
 SCDET_THRESHOLD_AUTO_PERCENTILE = 75  # auto-tune: use this percentile of scores as threshold
 SCDET_THRESHOLD_DEFAULT = 0.4  # fallback manual threshold (normalized)

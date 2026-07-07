@@ -5,6 +5,8 @@ from __future__ import annotations
 import logging
 from pathlib import Path
 
+import numpy as np
+
 from ..errors import ErrorCode, ExtractionReport
 
 logger = logging.getLogger(__name__)
@@ -125,6 +127,3 @@ def _json_default(obj):
     if isinstance(obj, (np.floating,)):
         return float(obj)
     raise TypeError(f"Not serializable: {type(obj)}")
-
-
-import numpy as np

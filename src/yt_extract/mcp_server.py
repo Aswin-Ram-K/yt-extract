@@ -49,7 +49,10 @@ def _run_extract(
     start = time.time()
     try:
         result = subprocess.run(
-            args, capture_output=True, text=True, timeout=600,
+            args,
+            capture_output=True,
+            text=True,
+            timeout=600,
         )
         elapsed = round(time.time() - start, 2)
 

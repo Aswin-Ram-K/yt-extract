@@ -103,11 +103,23 @@ class ExtractionReport:
         self.warnings: list[Warning] = []
         self.phases: dict[str, dict[str, Any]] = {}
 
-    def add_error(self, code: ErrorCode, detail: str, recoverable: bool = False, tb: str = "") -> None:
-        self.errors.append(ExtractionError(code=code, detail=detail, recoverable=recoverable, traceback_str=tb))
+    def add_error(
+        self, code: ErrorCode, detail: str, recoverable: bool = False, tb: str = ""
+    ) -> None:
+        self.errors.append(
+            ExtractionError(code=code, detail=detail, recoverable=recoverable, traceback_str=tb)
+        )
 
-    def add_warning(self, code: ErrorCode, detail: str, recoverable: bool = True, extra: dict[str, Any] | None = None) -> None:
-        self.warnings.append(Warning(code=code, detail=detail, recoverable=recoverable, extra=extra or {}))
+    def add_warning(
+        self,
+        code: ErrorCode,
+        detail: str,
+        recoverable: bool = True,
+        extra: dict[str, Any] | None = None,
+    ) -> None:
+        self.warnings.append(
+            Warning(code=code, detail=detail, recoverable=recoverable, extra=extra or {})
+        )
 
     def add_phase_report(self, name: str, report: dict[str, Any]) -> None:
         self.phases[name] = report
