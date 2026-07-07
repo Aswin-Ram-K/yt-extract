@@ -1,9 +1,11 @@
+README.md
 pyproject.toml
 src/yt_extract/__init__.py
 src/yt_extract/cli.py
 src/yt_extract/config.py
 src/yt_extract/errors.py
 src/yt_extract/extract.py
+src/yt_extract/mcp_server.py
 src/yt_extract.egg-info/PKG-INFO
 src/yt_extract.egg-info/SOURCES.txt
 src/yt_extract.egg-info/dependency_links.txt
@@ -25,3 +27,4 @@ src/yt_extract/video/downloader.py
 src/yt_extract/video/frames.py
 src/yt_extract/video/scdet.py
 src/yt_extract/video/verify.py
+tests/test_extraction.py
